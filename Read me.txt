@@ -1,0 +1,4 @@
+
+Movie Api Key ="0b954ffe12bfa38875c3defdbb9f0b9c"
+
+chat bot Api Key="AQ.Ab8RN6L93RkInAayaXLijfFmBuxvyYVK5J-AV1dJBnAfQ6ypXg"

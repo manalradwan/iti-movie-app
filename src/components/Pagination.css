@@ -1,0 +1,73 @@
+/* Unified Pagination Controls (Shared across Movies and TV Shows) */
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin: 35px 0;
+}
+
+/* Page Numbers */
+.pagination button:not(.arrow) {
+  width: 32px;
+  height: 32px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background-color: #1e1e1e;
+  color: #ffffff;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease, transform 0.15s ease;
+}
+
+.pagination button:not(.arrow):hover {
+  background-color: #333333;
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.pagination button:not(.arrow).active {
+  background-color: #ffd92f;
+  border-color: #ffd92f;
+  color: #222222;
+  font-weight: 700;
+}
+
+/* Arrow buttons */
+.pagination button.arrow {
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  margin: 0;
+  border: none;
+  border-radius: 4px;
+  background: transparent;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s ease, transform 0.15s ease;
+}
+
+.pagination button.arrow:hover:not(:disabled) {
+  background: transparent;
+  color: #ffd92f;
+  transform: scale(1.1);
+}
+
+.pagination button.arrow:disabled {
+  background: transparent;
+  color: #555555;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.pagination button.arrow i {
+  font-size: 14px;
+}
+

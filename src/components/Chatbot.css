@@ -1,0 +1,161 @@
+.chatbot-container {
+  width: 80%;
+  max-width: 900px;
+  height: 650px;
+  margin: 40px auto;
+  background: #181818;
+  border-radius: 20px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+
+/* Header */
+
+.chatbot-header {
+  background: #111;
+  color: white;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.chatbot-header i {
+  font-size: 30px;
+}
+
+.chatbot-header h2 {
+  margin: 0;
+}
+
+.chatbot-header p {
+  margin: 5px 0 0;
+  color: #aaa;
+}
+
+
+/* Messages */
+
+.chat-messages {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  background: #181818;
+  scroll-behavior: smooth;
+}
+
+.message {
+  max-width: 70%;
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  border-radius: 12px;
+}
+
+.message p {
+  margin: 5px 0 0;
+  line-height: 1.5;
+}
+
+
+/* User */
+
+.user-message {
+  margin-left: auto;
+  background: #f1c40f;
+  color: #222;
+}
+
+.user-message p {
+  color: #222;
+}
+
+
+/* AI */
+
+.ai-message {
+  margin-right: auto;
+  background: #252525;
+  color: #fff;
+  border: 1px solid #3a3a3a;
+}
+
+.ai-message p {
+  color: #fff;
+  margin: 5px 0 0;
+  line-height: 1.5;
+  white-space: pre-wrap;
+}
+
+
+/* Markdown */
+
+.ai-message h1,
+.ai-message h2,
+.ai-message h3 {
+  color: #fff;
+}
+
+.ai-message strong {
+  color: #f1c40f;
+}
+
+.ai-message ul,
+.ai-message ol {
+  padding-left: 20px;
+}
+
+.ai-message li {
+  margin-bottom: 5px;
+}
+
+
+/* Name */
+
+.message-name {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+
+/* Input */
+
+.chat-input {
+  display: flex;
+  padding: 15px;
+  border-top: 1px solid #333;
+  background: #111;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #444;
+  border-radius: 8px;
+  outline: none;
+  font-size: 16px;
+  background: #252525;
+  color: white;
+}
+
+.chat-input input::placeholder {
+  color: #888;
+}
+
+.chat-input button {
+  width: 50px;
+  margin-left: 10px;
+  border: none;
+  border-radius: 8px;
+  background: #f1c40f;
+  color: #222;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.chat-input button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}

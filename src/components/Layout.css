@@ -1,0 +1,246 @@
+/* Layout Container */
+.app-layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #000000;
+  color: #f8fafc;
+}
+
+/* Header & Sticky Navbar */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background-color: rgba(0, 0, 0, 0.85);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.navbar {
+  width: 100%;
+  max-width: 1280px;
+  height: 65px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+}
+
+.logo {
+  color: #f8fafc;
+  text-decoration: none;
+  font-size: 22px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  letter-spacing: -0.5px;
+  transition: color 0.2s ease;
+}
+
+.logo-icon {
+  color: #f5c518;
+  font-size: 20px;
+}
+
+.logo:hover {
+  color: #f5c518;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.nav-link {
+  color: #a1a1aa;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 14px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+}
+
+.nav-link:hover {
+  background-color: #181818;
+  color: #f8fafc;
+}
+
+.nav-link.active {
+  background-color: #1e1e1e;
+  color: #f5c518;
+}
+
+/* Main Content Area */
+.main-content {
+  flex: 1;
+  width: 100%;
+}
+
+/* Footer */
+.footer {
+  border-top: 1px solid #1a1a1a;
+  background-color: #050505;
+  padding: 24px;
+  margin-top: 40px;
+}
+
+.footer-content {
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 13px;
+  color: #71717a;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.footer-credits {
+  font-size: 12px;
+  color: #52525b;
+}
+
+/* Floating Chatbot Widget */
+.floating-chatbot-root {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 9999;
+}
+
+.floating-chat-trigger {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: none;
+  background: linear-gradient(135deg, #f5c518, #eab308);
+  color: #000000;
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+  transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.2s ease;
+}
+
+.floating-chat-trigger:hover {
+  transform: scale(1.1);
+  box-shadow: 0 12px 28px rgba(245, 197, 24, 0.4);
+}
+
+.floating-chat-trigger.active {
+  background: #27272a;
+  color: #f8fafc;
+}
+
+/* Floating Chat Popup Window */
+.floating-chat-popup {
+  position: absolute;
+  bottom: 70px;
+  right: 0;
+  width: 420px;
+  max-width: calc(100vw - 32px);
+  height: 580px;
+  max-height: calc(100vh - 120px);
+  background: #141414;
+  border-radius: 16px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8), 0 0 0 1px #27272a;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  animation: popupSlideUp 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes popupSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.floating-chat-header-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  background-color: #0a0a0a;
+  border-bottom: 1px solid #222;
+  font-size: 14px;
+  font-weight: 600;
+  color: #f8fafc;
+}
+
+.close-popup-btn {
+  background: none;
+  border: none;
+  color: #a1a1aa;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s ease;
+}
+
+.close-popup-btn:hover {
+  color: #f8fafc;
+}
+
+.floating-chat-body {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+}
+
+/* Ensure Chatbot component adapts smoothly inside the floating popup without modifying its code */
+.floating-chat-body .chatbot-container {
+  width: 100% !important;
+  max-width: 100% !important;
+  height: 100% !important;
+  margin: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .navbar {
+    padding: 0 16px;
+  }
+
+  .nav-links {
+    gap: 4px;
+  }
+
+  .nav-link {
+    padding: 6px 8px;
+    font-size: 12px;
+  }
+
+  .nav-link span {
+    display: none;
+  }
+
+  .floating-chat-popup {
+    width: calc(100vw - 32px);
+    right: -8px;
+    bottom: 65px;
+  }
+}

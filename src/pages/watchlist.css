@@ -1,0 +1,121 @@
+.watchlist-container {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 80vh;
+}
+
+.watchlist-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 40px;
+  color: #fff;
+}
+
+/* التنسيق في حالة القائمة فارغة */
+.empty-watchlist {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 60px;
+  text-align: center;
+}
+
+.empty-icon-wrapper {
+  margin-bottom: 20px;
+}
+
+.empty-icon {
+  font-size: 90px;
+  color: #ccc;
+  display: inline-block;
+  transform: rotate(-10deg);
+}
+
+.empty-text {
+  font-size: 20px;
+  font-weight: 500;
+  color: #94a3b8;
+  margin-bottom: 30px;
+}
+
+.btn-back-home {
+  background-color: #fdd835; /* اللون الأصفر المطابق للصورة */
+  color: #000;
+  border: none;
+  padding: 10px 45px;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 20px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn-back-home:hover {
+  background-color: #fbc02d;
+}
+
+/* عرض كروت الأفلام عندما تحتوي القائمة على أفلام */
+.movies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+.movie-card {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  background-color: #141414;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.movie-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+}
+
+.movie-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.movie-card-info {
+  padding: 15px;
+  text-align: center;
+  background-color: #141414;
+}
+
+.movie-card-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 12px;
+  color: #ffffff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.btn-remove {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  width: 100%;
+  transition: background-color 0.2s ease;
+}
+
+.btn-remove:hover {
+  background-color: #e60000;
+}

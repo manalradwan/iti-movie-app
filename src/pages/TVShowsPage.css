@@ -1,0 +1,15 @@
+.tv-page-container { max-width: 1200px; margin: 0 auto; padding: 30px 20px; color: #f8fafc; }
+.tv-header { margin-bottom: 24px; }
+.tv-header h1 { font-size: 28px; margin: 0 0 6px 0; color: #f8fafc; }
+.tv-header p { color: #94a3b8; margin: 0; }
+.tv-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 22px; }
+.tv-status { text-align: center; padding: 60px 0; font-size: 18px; color: #94a3b8; }
+.tv-status.error { color: #ef4444; }
+
+@media (max-width: 600px) {
+  .tv-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 16px;
+  }
+}
+
